@@ -148,6 +148,7 @@ import {
     },
     textInput: {
       height: 48,
+      marginBottom: 20,
       paddingRight: 10,
       paddingLeft: 10,
       borderColor: "gray",
