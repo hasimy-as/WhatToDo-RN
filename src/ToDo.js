@@ -14,7 +14,24 @@ import {
   
   const isAndroid = Platform.OS == "android";
   const viewPadding = 10;
-  
+  let Tasks = {
+    convertToArrayOfObject(tasks, callback) {
+      return callback(
+        tasks ? tasks.split("||").map((task, i) => ({ key: i, text: task })) : []
+      );
+    },
+    convertToStringWithSeparators(tasks) {
+      return tasks.map(task => task.text).join("||");
+    },
+    all(callback) {
+      return AsyncStorage.getItem("TASKS", (err, tasks) =>
+        this.convertToArrayOfObject(tasks, callback)
+      );
+    },
+    save(tasks) {
+      AsyncStorage.setItem("TASKS", this.convertToStringWithSeparators(tasks));
+    }
+  };
   export default class ToDo extends Component {
     state = {
       tasks: [],
@@ -102,31 +119,13 @@ import {
     }
   }
   
-  let Tasks = {
-    convertToArrayOfObject(tasks, callback) {
-      return callback(
-        tasks ? tasks.split("||").map((task, i) => ({ key: i, text: task })) : []
-      );
-    },
-    convertToStringWithSeparators(tasks) {
-      return tasks.map(task => task.text).join("||");
-    },
-    all(callback) {
-      return AsyncStorage.getItem("TASKS", (err, tasks) =>
-        this.convertToArrayOfObject(tasks, callback)
-      );
-    },
-    save(tasks) {
-      AsyncStorage.setItem("TASKS", this.convertToStringWithSeparators(tasks));
-    }
-  };
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#F5FCFF",
+      backgroundColor: "white",
       padding: viewPadding,
       marginTop: 20,
       paddingTop: 30
