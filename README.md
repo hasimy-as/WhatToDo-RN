@@ -19,7 +19,7 @@ Fourth, run the application!
 # Results
 After running the app, you'll be on this kind of screen where you can enter something, and delete it.
 
-![todos](docs/screenshot.png)
+![todos](docs/screenshotView.png)
 
 ## Licensed under the [MIT](https://raw.githubusercontent.com/hasimy-as/WhatToDo-RN/master/LICENSE) License.
 
