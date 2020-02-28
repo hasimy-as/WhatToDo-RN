@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9508,
-  "expoServerNgrokUrl": "https://ei-e73.as-hasimy.whattodo-rn.exp.direct",
-  "packagerNgrokUrl": "https://packager.ei-e73.as-hasimy.whattodo-rn.exp.direct",
-  "ngrokPid": 9519
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
